@@ -10,6 +10,10 @@ var baseURL = ''
 for (var i = 0; i < pathparts.length - 1; i++) {
     baseURL += '/' + pathparts[i]
 }
+var username = localStorage.getItem('itemUser')
+if (username) {
+    document.getElementById('username').innerHTML = "Welcome " + username
+}
 
 // ============= signUp ================
 var signUpArray = []
@@ -86,7 +90,7 @@ function login() {
         if (signUpArray[i].email.toLowerCase() == email.toLowerCase() && signUpArray[i].password.toLowerCase() == password.toLowerCase()) {
             localStorage.setItem('itemUser', signUpArray[i].name)
             if (baseURL == '/') {
-                location.replace('https://' + location.hostname + '/home.html')
+                location.replace('https://mohali10895.github.io/' + location.hostname + '/home.html')
 
             } else {
                 location.replace(baseURL + '/home.html')
@@ -102,9 +106,4 @@ function login() {
 // ============= logout ================
 function logout() {
     localStorage.removeItem('itemUser')
-}
-
-var username = localStorage.getItem('itemUser')
-if (username) {
-    document.getElementById('username').innerHTML = "Welcome " + username
 }
