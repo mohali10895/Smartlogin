@@ -89,13 +89,14 @@ function login() {
     for (var i = 0; i < signUpArray.length; i++) {
         if (signUpArray[i].email.toLowerCase() == email.toLowerCase() && signUpArray[i].password.toLowerCase() == password.toLowerCase()) {
             localStorage.setItem('itemUser', signUpArray[i].name)
-            if (baseURL == '/') {
-                location.replace('https://mohali10895.github.io/' + location.hostname + '/home.html')
+            location.replace('https://mohali10895.github.io/' + location.hostname + '/home.html')
+//             if (baseURL == '/') {
+                
 
-            } else {
-                location.replace(baseURL + '/home.html')
+//             } else {
+//                 location.replace(baseURL + '/home.html')
 
-            }
+//             }
         } else {
             document.getElementById('incorrect').innerHTML = '<span class="p-2 text-danger">incorrect email or password</span>'
         }
