@@ -1,0 +1,29 @@
+body {
+    background: #24353f;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#home {
+    height: 75vh;
+}
+
+h1 {
+    color: #17a2b8;
+}
+
+.group {
+    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+}
+
+input {
+    background-color: transparent !important;
+    color: #fff !important;
+}
+
+input::placeholder {
+    color: rgb(182, 182, 182) !important;
+}
+
+input:focus {
+    box-shadow: 0 0 0 0 transparent !important;
+}
