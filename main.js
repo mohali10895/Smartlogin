@@ -11,11 +11,6 @@ for (var i = 0; i < pathparts.length - 1; i++) {
     baseURL += '/' + pathparts[i]
 }
 
-var username = localStorage.getItem('itemUser')
-if (username) {
-    document.getElementById('username').innerHTML = "Welcome " + username
-}
-
 // ============= signUp ================
 var signUpArray = []
 if (localStorage.getItem('users') == null) {
@@ -107,4 +102,9 @@ function login() {
 // ============= logout ================
 function logout() {
     localStorage.removeItem('itemUser')
+}
+
+var username = localStorage.getItem('itemUser')
+if (username) {
+    document.getElementById('username').innerHTML = "Welcome " + username
 }
