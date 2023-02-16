@@ -89,7 +89,7 @@ function login() {
     for (var i = 0; i < signUpArray.length; i++) {
         if (signUpArray[i].email.toLowerCase() == email.toLowerCase() && signUpArray[i].password.toLowerCase() == password.toLowerCase()) {
             localStorage.setItem('itemUser', signUpArray[i].name)
-            location.replace('https://mohali10895.github.io/' + location.hostname + '/home.html')
+            location.replace('https://mohali10895.github.io/Smartlogin/home.html')
 //             if (baseURL == '/') {
                 
 
